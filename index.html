@@ -176,7 +176,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -252,7 +252,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-12-30T16:58:13+08:00" content="2016-12-30">
               2016-12-30
             </time>
@@ -285,14 +285,21 @@
           
             <h3 id="LESS"><a href="#LESS" class="headerlink" title="LESS"></a>LESS</h3><ul>
 <li>less是基于Nodejs的一个工具，此工具可以将.less文件转换成.css文件。</li>
-<li><p>使用：<br>新建一个文件index.less——&gt;在less文件中书写样式，用@定义变量——&gt;在html文件中必须引入下面的代码——&gt;打开cmd命令行（在index.less文件的根目录下打开cmd）——&gt;输入lessc index.less，回车，得到css文件<br><strong>（sass和less用法相似）</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;link style=&quot;stylesheet/less&quot; href=&quot;less/index.less&quot;&gt;</div><div class="line">    &lt;--!服务要放到服务器环境下--&gt;</div><div class="line">&lt;script src=&apos;libs/less.min.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<li><p>使用：</p>
+<ol>
+<li>新建一个文件index.less</li>
+<li>在less文件中书写样式，用@定义变量</li>
+<li>在html文件中必须加上下面的代码，并且需要在服务器环境下访问</li>
+<li>打开cmd命令行（在index.less文件的根目录下打开cmd）</li>
+<li>输入lessc index.less，回车，得到css文件<br><strong>（sass和less用法相似）</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;link style=&quot;stylesheet/less&quot; href=&quot;less/index.less&quot;&gt;</div><div class="line">    &lt;--!服务要放到服务器环境下--&gt;</div><div class="line">&lt;script src=&apos;libs/less.min.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 </li>
 <li><p>意义：<br>可以提高CSS的可维护程度，但是浏览器又不能直接识别LESS文件，需要转换成CSS后才能解析，所以开发阶段使用LESS，开发完成后使用</p>
 </li>
 </ul>
 <h3 id="SERVER"><a href="#SERVER" class="headerlink" title="$_SERVER"></a>$_SERVER</h3><ul>
-<li>$_SERVER是数组，可以获得服务器信息，其中索引为’PATH_INFO’的数组元素是地址部分信息。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    //该php文件名为index.php，执行此php文件，如果此时url为index.php/index,则$pathinfo的值为/index</div><div class="line">    $pathinfo=$_SERVER[&apos;PATH_INFO&apos;];</div><div class="line">    // 将路径进行拆分，得到[&apos;index&apos;]</div><div class="line">    $pathinfo = explode(&apos;/&apos;, substr($pathinfo, 1));</div><div class="line">    // 文件名称</div><div class="line">    $filename = $pathinfo[0]; </div><div class="line">    include &apos;./view/&apos;.$filename.&apos;.html&apos;;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<li>$_SERVER是数组，可以获得服务器信息，其中索引为’PATH_INFO’的数组元素是地址部分信息。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    //该php文件名为index.php，执行此php文件，如果此时url为index.php/index,则$pathinfo的值为/index</div><div class="line">    $pathinfo=$_SERVER[&apos;PATH_INFO&apos;];</div><div class="line">    // 将路径进行拆分，得到[&apos;index&apos;]</div><div class="line">    $pathinfo = explode(&apos;/&apos;, substr($pathinfo, 1));</div><div class="line">    // 文件名称</div><div class="line">    $filename = $pathinfo[0]; </div><div class="line">    // php中引入文件（include），执行该php文件时，加载引入的文件</div><div class="line">    include &apos;./view/&apos;.$filename.&apos;.html&apos;;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -365,7 +372,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -412,7 +419,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
