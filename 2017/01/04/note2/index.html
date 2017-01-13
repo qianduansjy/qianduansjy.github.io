@@ -97,7 +97,7 @@ Web开发是基于HTTP进行的，HTTP协议是一个无状态协议。所谓无
 
 cookie是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="note2">
+<meta property="og:title" content="笔记2">
 <meta property="og:url" content="http://yoursite.com/2017/01/04/note2/index.html">
 <meta property="og:site_name" content="小时光">
 <meta property="og:description" content="HTTP协议
@@ -106,17 +106,17 @@ Web开发是基于HTTP进行的，HTTP协议是一个无状态协议。所谓无
 会话机制是通过cookie和session来实现的。
 
 cookie是">
-<meta property="og:image" content="http://yoursite.com/C:\Users\Administrator\Desktop\httpd-vhosts.conf.JPG">
-<meta property="og:updated_time" content="2017-01-03T16:50:02.000Z">
+<meta property="og:image" content="http://yoursite.com/../images/httpd-vhosts.conf.JPG">
+<meta property="og:updated_time" content="2017-01-04T01:00:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="note2">
+<meta name="twitter:title" content="笔记2">
 <meta name="twitter:description" content="HTTP协议
 Web开发是基于HTTP进行的，HTTP协议是一个无状态协议。所谓无状态协议，是指服务端不会记录与客户端相关的任何内容。
 在现实中是需要服务端记录客户端信息的（需要有状态的），比如‘登录’，就需要服务器能够记录下来客户端的登录情况，并能够进行区分。这种机制就是HTTP的会话机制（通过HTTP会话机制解决无状态）。
 会话机制是通过cookie和session来实现的。
 
 cookie是">
-<meta name="twitter:image" content="http://yoursite.com/C:\Users\Administrator\Desktop\httpd-vhosts.conf.JPG">
+<meta name="twitter:image" content="http://yoursite.com/../images/httpd-vhosts.conf.JPG">
 
 
 
@@ -134,7 +134,7 @@ cookie是">
   };
 </script>
 
-  <title> note2 | 小时光 </title>
+  <title> 笔记2 | 小时光 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -254,7 +254,7 @@ cookie是">
             
             
               
-                note2
+                笔记2
               
             
           </h1>
@@ -336,8 +336,9 @@ cookie是">
 </ul>
 <h2 id="使用session"><a href="#使用session" class="headerlink" title="使用session"></a>使用session</h2><p><span style="color:red">大多数情况下不用cookie，因为其存在于浏览器，cookie有被盗取或篡改的风险。</span><br>使用session相当于“将东西存进商场的储物柜再取出来”的过程。</p>
 <h2 id="解决跨域"><a href="#解决跨域" class="headerlink" title="解决跨域"></a>解决跨域</h2><p><span style="color:red">在开发中遇到接口开发时会遇到跨域的问题，进行开发首要任务是解决跨域的问题，JSONP属于一种（需要服务端配合）， 假如数据的安全性较低，建议采用JSONP方式，假如数据的安全性较高，建议采用反向代理的方式。</span></p>
-<p>反向代理（解决跨域）：修改配置文件httpd-vhosts.conf<br><img src="C:\Users\Administrator\Desktop\httpd-vhosts.conf.JPG" alt=""><br><span style="color:brown">// 关闭正向代理，即开启反向代理</span><br>ProxyRequests Off<br><span style="color:brown">// 输入’/api’相当于输入’<a href="http://api.botue.com" target="_blank" rel="external">http://api.botue.com</a>‘</span><br>ProxyPass /api <a href="http://api.botue.com" target="_blank" rel="external">http://api.botue.com</a> </p>
+<p>反向代理（解决跨域）：修改配置文件httpd-vhosts.conf<br><img src="../images/httpd-vhosts.conf.JPG" alt=""><br><span style="color:brown">// 关闭正向代理，即开启反向代理</span><br>ProxyRequests Off<br><span style="color:brown">// 输入’/api’相当于输入’<a href="http://api.botue.com" target="_blank" rel="external">http://api.botue.com</a>‘</span><br>ProxyPass /api <a href="http://api.botue.com" target="_blank" rel="external">http://api.botue.com</a> </p>
 <h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><p>采用前后端分离的方式开发，可以使各开发人员各司其职，从而使得开发变得更加高效。</p>
+<h2 id="sessionStorage和localStorage与cookie和session的区别"><a href="#sessionStorage和localStorage与cookie和session的区别" class="headerlink" title="sessionStorage和localStorage与cookie和session的区别"></a>sessionStorage和localStorage与cookie和session的区别</h2><p>sessionStorage和localStorage用来存储数据，cookie和session用作会话机制。</p>
 
       
     </div>
@@ -369,6 +370,10 @@ cookie是">
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/13/node/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -436,7 +441,7 @@ cookie是">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
@@ -468,7 +473,7 @@ cookie是">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP协议"><span class="nav-number">1.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie是什么？"><span class="nav-number">2.</span> <span class="nav-text">cookie是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#session是什么？"><span class="nav-number">3.</span> <span class="nav-text">session是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用session"><span class="nav-number">4.</span> <span class="nav-text">使用session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决跨域"><span class="nav-number">5.</span> <span class="nav-text">解决跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前后端分离"><span class="nav-number">6.</span> <span class="nav-text">前后端分离</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP协议"><span class="nav-number">1.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie是什么？"><span class="nav-number">2.</span> <span class="nav-text">cookie是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#session是什么？"><span class="nav-number">3.</span> <span class="nav-text">session是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用session"><span class="nav-number">4.</span> <span class="nav-text">使用session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决跨域"><span class="nav-number">5.</span> <span class="nav-text">解决跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前后端分离"><span class="nav-number">6.</span> <span class="nav-text">前后端分离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sessionStorage和localStorage与cookie和session的区别"><span class="nav-number">7.</span> <span class="nav-text">sessionStorage和localStorage与cookie和session的区别</span></a></li></ol></div>
             
           </div>
         </section>
